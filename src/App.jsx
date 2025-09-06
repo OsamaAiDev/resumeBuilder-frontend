@@ -13,16 +13,16 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/resume/:resumeId" element={<EditResume />} />
       </Routes>
-      <Toaster toastOptions={{
-        className: "",
-        style: {
-          fontSize: "13px"
-        }
-      }}>
-        
-      </Toaster>
+      <Toaster
+        toastOptions={{
+          className: "",
+          style: {
+            fontSize: "13px",
+          },
+        }}
+      ></Toaster>
     </UserProvider>
   );
 };
-
+console.log("BASE_URL:", import.meta.env.VITE_BASE_URL);
 export default App;

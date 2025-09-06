@@ -1,10 +1,9 @@
 export const BASE_URL =
-  process.env.REACT_APP_BASE_URL ||
-  (process.env.NODE_ENV === "production"
+  import.meta.env.VITE_BASE_URL ||
+  (import.meta.env.MODE === "production"
     ? "https://resume-builder-backend-flame.vercel.app"
     : "http://localhost:4000");
 
-// routes used for frontend
 export const API_PATHS = {
   AUTH: {
     REGISTER: "/api/auth/register",
