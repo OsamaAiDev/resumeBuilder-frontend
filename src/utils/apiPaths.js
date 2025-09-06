@@ -3,7 +3,6 @@ export const BASE_URL =
   (process.env.NODE_ENV === "production"
     ? "https://resume-builder-backend-flame.vercel.app"
     : "http://localhost:4000");
-console.log("ENV variable", REACT_APP_BASE_URL);
 
 // routes used for frontend
 export const API_PATHS = {
@@ -20,7 +19,7 @@ export const API_PATHS = {
     DELETE: (id) => `/api/resume/${id}`,
     UPLOAD_IMAGES: (id) => `/api/resume/${id}/upload-images`,
   },
-  image: {
+  IMAGE: {
     UPLOAD_IMAGE: "/api/auth/upload-image",
   },
 };
